@@ -1,0 +1,158 @@
+<header class="toolbar">
+
+	<div class="actions">
+		<div class="btn-group">
+
+			<button (click)="editor.chain().focus().undo().run()">
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+					stroke="currentColor">
+					<path
+						d="M7.49886 11.6667L4.16553 8.33333M4.16553 8.33333L7.49886 5M4.16553 8.33333H13.3322C14.2162 8.33333 15.0641 8.68452 15.6892 9.30964C16.3143 9.93477 16.6655 10.7826 16.6655 11.6667C16.6655 12.5507 16.3143 13.3986 15.6892 14.0237C15.0641 14.6488 14.2162 15 13.3322 15H12.4989"
+						stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+
+			</button>
+
+			<button (click)="editor.chain().focus().redo().run()">
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+					stroke="currentColor">
+					<path
+						d="M12.4997 11.6667L15.833 8.33333M15.833 8.33333L12.4997 5M15.833 8.33333H6.66634C5.78229 8.33333 4.93444 8.68452 4.30932 9.30964C3.6842 9.93477 3.33301 10.7826 3.33301 11.6667C3.33301 12.5507 3.6842 13.3986 4.30932 14.0237C4.93444 14.6488 5.78229 15 6.66634 15H7.49967"
+						stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</button>
+		</div>
+
+		<div class="divider"></div>
+
+		<input placeholder="Enter Name" maxlength="12" class="title" value="Planets">
+
+		<div class="divider"></div>
+
+		<div class="btn-group">
+			<button (click)="editor.chain().focus().setHeading({ level: 1 }).run()">
+				<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"
+					stroke="currentColor">
+					<path
+						d="M15.8333 15.3335V8.66683L14.1667 10.3335M3.33333 5.3335V15.3335M10 5.3335V15.3335M9.16667 15.3335H10.8333M2.5 15.3335H4.16667M3.33333 10.3335H10M2.5 5.3335H4.16667M9.16667 5.3335H10.8333"
+						stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+
+
+			</button>
+
+			<button (click)="editor.chain().focus().setHeading({ level: 2 }).run()">
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+					stroke="currentColor">
+					<path
+						d="M14.1667 10C14.1667 9.55797 14.3423 9.13405 14.6548 8.82149C14.9674 8.50893 15.3913 8.33333 15.8333 8.33333C16.2754 8.33333 16.6993 8.50893 17.0118 8.82149C17.3244 9.13405 17.5 9.55797 17.5 10C17.5 10.4925 17.1525 11.0983 16.82 11.5483L14.1667 15.0008H17.5M3.33333 5V15M10 5V15M9.16667 15H10.8333M2.5 15H4.16667M3.33333 10H10M2.5 5H4.16667M9.16667 5H10.8333"
+						stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+
+			</button>
+
+			<button (click)="editor.chain().focus().setHeading({ level: 3 }).run()">
+				<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"
+					stroke="currentColor">
+					<path
+						d="M14.1667 10.6665C14.1667 10.3369 14.2644 10.0146 14.4476 9.74055C14.6307 9.46647 14.891 9.25285 15.1955 9.12671C15.5001 9.00056 15.8352 8.96755 16.1585 9.03186C16.4818 9.09617 16.7788 9.25491 17.0118 9.48799C17.2449 9.72108 17.4037 10.0181 17.468 10.3414C17.5323 10.6647 17.4993 10.9998 17.3731 11.3043C17.247 11.6089 17.0334 11.8692 16.7593 12.0523C16.4852 12.2354 16.163 12.3332 15.8333 12.3332C16.163 12.3332 16.4852 12.4309 16.7593 12.6141C17.0334 12.7972 17.247 13.0575 17.3731 13.362C17.4993 13.6666 17.5323 14.0017 17.468 14.325C17.4037 14.6483 17.2449 14.9453 17.0118 15.1783C16.7788 15.4114 16.4818 15.5702 16.1585 15.6345C15.8352 15.6988 15.5001 15.6658 15.1955 15.5396C14.891 15.4135 14.6307 15.1999 14.4476 14.9258C14.2644 14.6517 14.1667 14.3295 14.1667 13.9998M3.33333 5.6665V15.6665M10 5.6665V15.6665M9.16667 15.6665H10.8333M2.5 15.6665H4.16667M3.33333 10.6665H10M2.5 5.6665H4.16667M9.16667 5.6665H10.8333"
+						stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+
+
+			</button>
+
+			<button (click)="editor.chain().focus().setParagraph().run()">
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+					stroke="currentColor">
+					<path
+						d="M10.8332 3.3335V16.6668M14.1665 3.3335V16.6668M15.8332 3.3335H7.9165C6.92194 3.3335 5.96811 3.72858 5.26485 4.43185C4.56159 5.13511 4.1665 6.08893 4.1665 7.0835C4.1665 8.07806 4.56159 9.03188 5.26485 9.73515C5.96811 10.4384 6.92194 10.8335 7.9165 10.8335H10.8332"
+						stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+
+
+
+			</button>
+		</div>
+
+		<div class="divider"></div>
+
+		<div class="btn-group">
+			<button (click)="editor.chain().focus().toggleBold().run()">
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+					stroke="currentColor">
+					<path
+						d="M10.833 9.99996C11.6066 9.99996 12.3484 9.69267 12.8954 9.14569C13.4424 8.59871 13.7497 7.85684 13.7497 7.08329C13.7497 6.30974 13.4424 5.56788 12.8954 5.0209C12.3484 4.47392 11.6066 4.16663 10.833 4.16663H5.83301V9.99996M10.833 9.99996H5.83301M10.833 9.99996H11.6663C12.4399 9.99996 13.1818 10.3073 13.7287 10.8542C14.2757 11.4012 14.583 12.1431 14.583 12.9166C14.583 13.6902 14.2757 14.432 13.7287 14.979C13.1818 15.526 12.4399 15.8333 11.6663 15.8333H5.83301V9.99996"
+						stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+
+			</button>
+
+			<button (click)="editor.chain().focus().toggleItalic().run()">
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+					stroke="currentColor">
+					<path d="M9.16634 4.16663H14.1663M5.83301 15.8333H10.833M11.6663 4.16663L8.33301 15.8333"
+						stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+
+			</button>
+
+			<button (click)="editor.chain().focus().toggleUnderline().run()">
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+					stroke="currentColor">
+					<path
+						d="M5.83268 4.16663V8.33329C5.83268 9.43836 6.27167 10.4982 7.05307 11.2796C7.83447 12.061 8.89428 12.5 9.99935 12.5C11.1044 12.5 12.1642 12.061 12.9456 11.2796C13.727 10.4982 14.166 9.43836 14.166 8.33329V4.16663M4.16602 15.8333H15.8327"
+						stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+
+			</button>
+
+			<button>
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+					stroke="currentColor">
+					<path
+						d="M4.16602 9.99992H15.8327M13.3327 5.41661C13.1437 5.04991 12.7106 4.72631 12.1048 4.49911C11.4989 4.2719 10.7563 4.15463 9.99935 4.16661H9.16602C8.39247 4.16661 7.6506 4.4739 7.10362 5.02088C6.55664 5.56786 6.24935 6.30972 6.24935 7.08327C6.24935 7.85682 6.55664 8.59869 7.10362 9.14567C7.6506 9.69265 8.39247 9.99994 9.16602 9.99994H10.8327C11.6062 9.99994 12.3481 10.3072 12.8951 10.8542C13.4421 11.4012 13.7493 12.1431 13.7493 12.9166C13.7493 13.6902 13.4421 14.432 12.8951 14.979C12.3481 15.526 11.6062 15.8333 10.8327 15.8333H9.58268C8.82571 15.8452 8.08315 15.728 7.47726 15.5008C6.87138 15.2736 6.43831 14.95 6.24935 14.5833"
+						stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+
+
+			</button>
+
+			<button (click)="addImage(editor)">
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+					stroke="currentColor">
+					<path
+						d="M12.5 6.66667H12.5083M2.5 13.3333L6.66667 9.16668C7.44 8.42251 8.39333 8.42251 9.16667 9.16668L13.3333 13.3333M11.6667 11.6667L12.5 10.8333C13.2733 10.0892 14.2267 10.0892 15 10.8333L17.5 13.3333M2.5 5C2.5 4.33696 2.76339 3.70107 3.23223 3.23223C3.70107 2.76339 4.33696 2.5 5 2.5H15C15.663 2.5 16.2989 2.76339 16.7678 3.23223C17.2366 3.70107 17.5 4.33696 17.5 5V15C17.5 15.663 17.2366 16.2989 16.7678 16.7678C16.2989 17.2366 15.663 17.5 15 17.5H5C4.33696 17.5 3.70107 17.2366 3.23223 16.7678C2.76339 16.2989 2.5 15.663 2.5 15V5Z"
+						stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+
+
+			</button>
+		</div>
+
+	</div>
+
+	<div class="velt-actions">
+		<velt-presence></velt-presence>
+		<velt-comments-sidebar></velt-comments-sidebar>
+		<velt-sidebar-button></velt-sidebar-button>
+		<velt-notifications-tool shadow-dom="false"></velt-notifications-tool>
+		<button class="theme-toggle" (click)="toggleDarkMode()">
+			<svg *ngIf="!isDarkMode" width="21" height="20" viewBox="0 0 21 20" fill="none" stroke="currentColor"
+				xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M10.8332 2.50001C10.9432 2.50001 11.0523 2.50001 11.1607 2.50001C10.0901 3.49477 9.40198 4.83322 9.21589 6.2827C9.02981 7.73218 9.35753 9.20104 10.1421 10.434C10.9267 11.6669 12.1185 12.5859 13.5103 13.0312C14.9022 13.4766 16.4061 13.4201 17.7607 12.8717C17.2396 14.1254 16.388 15.2142 15.2966 16.0219C14.2053 16.8296 12.9152 17.3259 11.5639 17.4578C10.2126 17.5898 8.85087 17.3525 7.62389 16.7712C6.39692 16.1899 5.35074 15.2864 4.59698 14.1572C3.84321 13.0279 3.41011 11.7152 3.34389 10.3592C3.27767 9.00306 3.5808 7.65443 4.22096 6.45711C4.86112 5.25979 5.81429 4.2587 6.97879 3.56063C8.14329 2.86255 9.47544 2.49367 10.8332 2.49335V2.50001Z"
+					stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+
+			<svg *ngIf="isDarkMode" width="21" height="20" viewBox="0 0 21 20" fill="none" stroke="currentColor"
+				xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M2.6665 10H3.49984M10.1665 2.5V3.33333M16.8332 10H17.6665M10.1665 16.6667V17.5M4.83317 4.66667L5.4165 5.25M15.4998 4.66667L14.9165 5.25M14.9165 14.75L15.4998 15.3333M5.4165 14.75L4.83317 15.3333M6.83317 10C6.83317 10.8841 7.18436 11.7319 7.80948 12.357C8.4346 12.9821 9.28245 13.3333 10.1665 13.3333C11.0506 13.3333 11.8984 12.9821 12.5235 12.357C13.1486 11.7319 13.4998 10.8841 13.4998 10C13.4998 9.11594 13.1486 8.2681 12.5235 7.64298C11.8984 7.01786 11.0506 6.66667 10.1665 6.66667C9.28245 6.66667 8.4346 7.01786 7.80948 7.64298C7.18436 8.2681 6.83317 9.11594 6.83317 10Z"
+					stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+
+		</button>
+	</div>
+
+</header>

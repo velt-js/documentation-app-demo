@@ -1,0 +1,11 @@
+<main class="main">
+	<app-sidebar></app-sidebar>
+
+	<div class="content">
+		<app-toolbar [editor]="editor"></app-toolbar>
+		<app-tiptap [editor]="editor" [value]="value"></app-tiptap>
+		<velt-comments text-mode="false"></velt-comments>
+	</div>
+</main>
+
+<router-outlet />

@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Urbanist', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img {
+	user-select: none;
+	pointer-events: none;
+}
+
+// Variables
+:root {
+	color-scheme: light dark;
+
+	--dark-bg-0: rgba(255, 255, 255, 0.06);
+	--dark-bg-1: rgba(255, 255, 255, 0.08);
+	--dark-text-0: rgba(255, 255, 255, 0.44);
+	--dark-text-1: rgba(255, 255, 255, 0.8);
+
+	--light-bg-0: rgba(0, 0, 0, 0.02);
+	--light-bg-1: rgba(0, 0, 0, 0.04);
+	--light-text-0: rgba(0, 0, 0, 0.44);
+	--light-text-1: rgba(0, 0, 0, 0.8);
+
+}
+
+// Global styles
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	transition: background-color 150ms ease-in-out;
+}
+
+body {
+	background-color: light-dark(white, black);
+	color: light-dark(black, white);
+}
+
+velt-notifications-tool {
+	div div app-notifications-tool-label {
+		display: none;
+	}
+}
+
+velt-comment-text {
+	background-color: #FFCD2E24;
+	color: #cb9f0d;
+}
+
+tiptap-editor {
+	div[contenteditable="true"]:focus-visible {
+		outline: none !important;
+		border: none !important;
+
+	}
+
+	div[contenteditable="true"] {
+		h1, h2, h3 {
+			margin: 1.25rem 0 !important;
+		}
+	}
+}
