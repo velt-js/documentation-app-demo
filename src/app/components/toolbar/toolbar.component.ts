@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { VeltService } from '../../services/velt.service';
 import { Editor } from '@tiptap/core';
 
+import { addTiptapVeltComment } from '@veltdev/tiptap-velt-comments';
+
 @Component({
 	selector: 'app-toolbar',
 	standalone: true,
@@ -43,5 +45,11 @@ export class ToolbarComponent implements OnInit {
 		if (url) {
 			editor.chain().focus().setImage({ src: url }).run();
 		}
+	}
+
+
+
+	addTiptapVeltComment = (editor: Editor) => {
+		addTiptapVeltComment(editor);
 	}
 }

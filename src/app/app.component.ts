@@ -12,11 +12,11 @@ import { VeltService } from './services/velt.service';
 import { Content, Editor } from '@tiptap/core';
 import StarterKit from '@tiptap/starter-kit';
 import Placeholder from '@tiptap/extension-placeholder';
-import { TiptapVeltComments } from '@veltdev/tiptap-velt-comments';
 import Underline from '@tiptap/extension-underline'
 import TextAlign from '@tiptap/extension-text-align'
 import Image from '@tiptap/extension-image'
 
+import { TiptapVeltComments } from '@veltdev/tiptap-velt-comments';
 
 @Component({
 	selector: 'app-root',
@@ -33,16 +33,15 @@ export class AppComponent implements OnInit, OnDestroy {
 
 	editor = new Editor({
 		extensions: [
+			TiptapVeltComments,
 			StarterKit,
 			Placeholder,
-			TiptapVeltComments,
 			Underline,
 			TextAlign,
 			Image
 		],
 		editorProps: {
 			attributes: {
-				class: 'p-2 border-black border-2 rounded-b-md outline-none',
 				spellCheck: 'false',
 			},
 		},
@@ -86,6 +85,7 @@ The theme of Brian's talk was that the conventional wisdom about how to run larg
 		if (user) {
 			await this.veltService.identifyUser(user);
 		}
+
 	}
 
 

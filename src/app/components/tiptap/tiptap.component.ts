@@ -1,5 +1,4 @@
 import { Component, effect, Input } from '@angular/core';
-import { TiptapVeltComments, addTiptapVeltComment } from '@veltdev/tiptap-velt-comments';
 import { FormsModule } from '@angular/forms';
 import { VeltService } from '../../services/velt.service';
 
@@ -42,10 +41,6 @@ export class TiptapComponent {
 		});
 	}
 
-
-	addTiptapVeltComment = (editor: Editor) => {
-		addTiptapVeltComment(editor);
-	}
 
 	handleValueChange(value: Content): void {
 		this.value = value;
