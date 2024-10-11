@@ -6,6 +6,9 @@ import { Content, Editor } from '@tiptap/core';
 import { NgxTiptapModule } from 'ngx-tiptap';
 import { CommonModule } from '@angular/common';
 
+
+import { addTiptapVeltComment } from '@veltdev/tiptap-velt-comments';
+
 @Component({
 	selector: 'app-tiptap',
 	standalone: true,
@@ -44,5 +47,9 @@ export class TiptapComponent {
 
 	handleValueChange(value: Content): void {
 		this.value = value;
+	}
+
+	addTiptapVeltComment(editor: Editor) {
+		addTiptapVeltComment(editor);
 	}
 }

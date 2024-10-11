@@ -8,4 +8,24 @@ form {
 		line-height: 1.5;
 	}
 
+
+	.bubble-menu {
+		button {
+			background-color: #674ff2;
+			width: 32px;
+			height: 32px;
+			outline: none;
+			border: none;
+			cursor: pointer;
+			border-radius: 32px;
+			box-shadow: 0 0 0 1px light-dark(var(--light-bg-1), var(--dark-bg-1));
+			d
+
+			svg {
+				path {
+					stroke: white
+				}
+			}
+		}
+	}
 }

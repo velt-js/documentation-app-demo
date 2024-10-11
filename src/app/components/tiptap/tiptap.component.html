@@ -2,5 +2,18 @@
 	<div>
 		<tiptap-editor [editor]="editor" name="simple-editor" [ngModel]="value"
 			(ngModelChange)="handleValueChange($event)"></tiptap-editor>
+		<tiptap-bubble-menu [editor]="editor">
+			<div class="" data-test-id="bubble-menu" class="bubble-menu">
+				<button (click)="addTiptapVeltComment(editor)">
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+						stroke="currentColor">
+						<path
+							d="M10 17.25H4C3.30964 17.25 2.75 16.6904 2.75 16V10C2.75 5.99594 5.99594 2.75 10 2.75C14.0041 2.75 17.25 5.99594 17.25 10C17.25 14.0041 14.0041 17.25 10 17.25Z"
+							stroke-width="1.5" />
+					</svg>
+
+				</button>
+			</div>
+		</tiptap-bubble-menu>
 	</div>
 </form>
