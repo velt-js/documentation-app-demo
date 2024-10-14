@@ -48,9 +48,11 @@ velt-notifications-tool {
 }
 
 velt-comment-text[comment-available="true"] {
-	background-color: #FFCD2E24;
-	color: #cb9f0d;
+	background-color: #ffce2e24;
+	color: #E2A600;
+	text-decoration: underline;
 }
+
 
 tiptap-editor {
 	div[contenteditable="true"]:focus-visible {
