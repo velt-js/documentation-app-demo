@@ -3,7 +3,7 @@
 
 	<div class="content">
 		<app-toolbar [editor]="editor" [class]="focusMode ? 'hide-toolbar' : ''"></app-toolbar>
-		<app-tiptap [editor]="editor" [value]="value"></app-tiptap>
+		<app-tiptap [editor]="editor" [value]="value" [focusMode]="focusMode"></app-tiptap>
 		<velt-comments text-mode="false"></velt-comments>
 	</div>
 </main>

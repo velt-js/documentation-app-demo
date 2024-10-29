@@ -20,6 +20,7 @@ export class TiptapComponent {
 
 	@Input() editor!: Editor;
 	@Input() value!: Content;
+	@Input() focusMode!: boolean;
 
 	// Getting the Velt Client
 	client = this.veltService.clientSignal();
