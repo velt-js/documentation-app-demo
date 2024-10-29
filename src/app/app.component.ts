@@ -29,6 +29,7 @@ import { TiptapVeltComments } from '@veltdev/tiptap-velt-comments';
 
 export class AppComponent implements OnInit, OnDestroy {
 	title = 'tiptap-angular';
+	focusMode = false;
 
 
 	editor = new Editor({
@@ -72,6 +73,13 @@ The theme of Brian's talk was that the conventional wisdom about how to run larg
 		this.editor.on('blur', () => {
 			localStorage.setItem('tiptapContent', JSON.stringify(this.editor.getHTML()));
 		});
+
+		
+		const urlParams = new URLSearchParams(window.location.search);
+		const focused = urlParams.get('focused');
+		if (focused === 'true') {
+			this.focusMode = true;
+		}
 
 	}
 

@@ -1,8 +1,8 @@
 <main class="main">
-	<app-sidebar></app-sidebar>
+	<app-sidebar [class]="focusMode ? 'hide-sidebar' : ''"></app-sidebar>
 
 	<div class="content">
-		<app-toolbar [editor]="editor"></app-toolbar>
+		<app-toolbar [editor]="editor" [class]="focusMode ? 'hide-toolbar' : ''"></app-toolbar>
 		<app-tiptap [editor]="editor" [value]="value"></app-tiptap>
 		<velt-comments text-mode="false"></velt-comments>
 	</div>
