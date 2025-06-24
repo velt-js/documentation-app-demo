@@ -34,7 +34,9 @@ export class AppComponent implements OnInit, OnDestroy {
 
 	editor = new Editor({
 		extensions: [
-			TiptapVeltComments,
+			TiptapVeltComments.configure({
+				persistVeltMarks: false
+			}),
 			StarterKit,
 			Placeholder,
 			Underline,

@@ -7,7 +7,10 @@ import { NgxTiptapModule } from 'ngx-tiptap';
 import { CommonModule } from '@angular/common';
 
 
-import { addTiptapVeltComment } from '@veltdev/tiptap-velt-comments';
+// import { addTiptapVeltComment } from '@veltdev/tiptap-velt-comments';
+import { addComment, AddCommentRequest, renderComments } from '@veltdev/tiptap-velt-comments';
+import { CommentAnnotation } from '@veltdev/types';
+import { Subscription } from 'rxjs';
 
 @Component({
 	selector: 'app-tiptap',
@@ -22,6 +25,8 @@ export class TiptapComponent {
 	@Input() value!: Content;
 	@Input() focusMode!: boolean;
 
+	sub!: Subscription;
+	
 	// Getting the Velt Client
 	client = this.veltService.clientSignal();
 
@@ -45,12 +50,15 @@ export class TiptapComponent {
 		});
 	}
 
-
 	handleValueChange(value: Content): void {
 		this.value = value;
 	}
 
 	addTiptapVeltComment(editor: Editor) {
-		addTiptapVeltComment(editor);
+		const addCommentRequest: AddCommentRequest = {
+			editor,
+		};
+
+		addComment(addCommentRequest);
 	}
 }
