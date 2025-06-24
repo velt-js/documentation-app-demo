@@ -23,8 +23,6 @@ export class ToolbarComponent implements OnInit {
 	ngOnInit() {
 		this.isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 		this.updateColorScheme();
-		console.log(Editor);
-
 	}
 
 	// Change theme when user clicks on theme button
