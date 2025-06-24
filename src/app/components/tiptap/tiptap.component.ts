@@ -7,7 +7,10 @@ import { NgxTiptapModule } from 'ngx-tiptap';
 import { CommonModule } from '@angular/common';
 
 
-import { addTiptapVeltComment } from '@veltdev/tiptap-velt-comments';
+// import { addTiptapVeltComment } from '@veltdev/tiptap-velt-comments';
+import { addComment, AddCommentRequest, renderComments } from '@veltdev/tiptap-velt-comments';
+import { CommentAnnotation } from '@veltdev/types';
+import { Subscription } from 'rxjs';
 
 @Component({
 	selector: 'app-tiptap',
@@ -22,6 +25,8 @@ export class TiptapComponent {
 	@Input() value!: Content;
 	@Input() focusMode!: boolean;
 
+	sub!: Subscription;
+	
 	// Getting the Velt Client
 	client = this.veltService.clientSignal();
 
@@ -41,16 +46,39 @@ export class TiptapComponent {
 
 				// Enable dark mode for Velt UI
 				this.client.setDarkMode(true);
+
+				if (!this.sub) {
+					this.sub = this.client.getCommentElement().getAllCommentAnnotations().subscribe((annotations: CommentAnnotation[] | null) => {
+						console.log('annotations', annotations);
+
+						if (annotations && annotations.length > 0) {
+							this.renderTipTapComments(annotations);
+						}
+					});
+				}
+
 			}
 		});
 	}
 
+	renderTipTapComments(annotations: CommentAnnotation[]){
+		console.log('renderTipTapComments', annotations, this.editor);
+		const renderCommentsRequest = {
+			editor: this.editor,
+			annotations: annotations,
+		};
+		renderComments(renderCommentsRequest);
+	}
 
 	handleValueChange(value: Content): void {
 		this.value = value;
 	}
 
 	addTiptapVeltComment(editor: Editor) {
-		addTiptapVeltComment(editor);
+		const addCommentRequest: AddCommentRequest = {
+			editor,
+		};
+
+		addComment(addCommentRequest);
 	}
 }

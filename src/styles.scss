@@ -47,11 +47,11 @@ velt-notifications-tool {
 	}
 }
 
-// velt-comment-text[comment-available="true"] {
-// 	background-color: #ffce2e24;
-// 	color: #E2A600;
-// 	text-decoration: underline;
-// }
+velt-comment-text[comment-available="true"] {
+	background-color: #ffce2e24;
+	color: #E2A600;
+	text-decoration: underline;
+}
 
 
 tiptap-editor {
@@ -62,7 +62,10 @@ tiptap-editor {
 	}
 
 	div[contenteditable="true"] {
-		h1, h2, h3 {
+
+		h1,
+		h2,
+		h3 {
 			margin: 1.25rem 0 !important;
 		}
 	}
