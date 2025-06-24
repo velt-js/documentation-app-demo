@@ -46,28 +46,8 @@ export class TiptapComponent {
 
 				// Enable dark mode for Velt UI
 				this.client.setDarkMode(true);
-
-				if (!this.sub) {
-					this.sub = this.client.getCommentElement().getAllCommentAnnotations().subscribe((annotations: CommentAnnotation[] | null) => {
-						console.log('annotations', annotations);
-
-						if (annotations && annotations.length > 0) {
-							this.renderTipTapComments(annotations);
-						}
-					});
-				}
-
 			}
 		});
-	}
-
-	renderTipTapComments(annotations: CommentAnnotation[]){
-		console.log('renderTipTapComments', annotations, this.editor);
-		const renderCommentsRequest = {
-			editor: this.editor,
-			annotations: annotations,
-		};
-		renderComments(renderCommentsRequest);
 	}
 
 	handleValueChange(value: Content): void {
