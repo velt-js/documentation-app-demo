@@ -7,9 +7,7 @@ import { NgxTiptapModule } from 'ngx-tiptap';
 import { CommonModule } from '@angular/common';
 
 
-// import { addTiptapVeltComment } from '@veltdev/tiptap-velt-comments';
-import { addComment, AddCommentRequest, renderComments } from '@veltdev/tiptap-velt-comments';
-import { CommentAnnotation } from '@veltdev/types';
+import { addComment, AddCommentRequest } from '@veltdev/tiptap-velt-comments';
 import { Subscription } from 'rxjs';
 
 @Component({
