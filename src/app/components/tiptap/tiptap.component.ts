@@ -40,7 +40,7 @@ export class TiptapComponent {
 			if (this.client) {
 
 				// Contain your comments in a document by setting a Document ID & Name
-				this.client.setDocument('tiptap-angular-demo', { documentName: 'tiptap-angular-demo' });
+				this.client.setDocument('tiptap-angular-demo-2', { documentName: 'tiptap-angular-demo' });
 
 				// Enable dark mode for Velt UI
 				this.client.setDarkMode(true);
