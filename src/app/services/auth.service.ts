@@ -43,7 +43,7 @@ export class AuthService {
 			email: randomUser.email,
 			photoUrl: randomUser.photoUrl,
 			textColor: "#fff",
-			organizationId: "tiptap-angular-demo-org",
+			organizationId: "tiptap-angular-demo-org-2",
 		};
 	}
 
